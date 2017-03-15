@@ -123,7 +123,39 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 	```
 	*【NOTE】Make sure your OpenCV  and OpenCV_contrib  versions are the same (in this case, 3.1.0 ). If the versions numbers do not match up, then you’ll likely run into either compile-time or runtime.*
 
-- __Step 4__ : Expand filesystem
+- __Step 4__ : Python3 Installation
+
+	Before we can start compiling OpenCV on our Raspberry Pi 3, we first need to install pip, a Python package manager:
+	```
+	$ wget https://bootstrap.pypa.io/get-pip.py
+	$ sudo python get-pip.py
+	```
+	Then, you should need the virtual environments (virtualenv and virtualenvwrapper):
+	```
+	$ sudo pip install virtualenv virtualenvwrapper
+	$ sudo rm -rf ~/.cache/pip
+	```
+	Now that both virtualenv and virtualenvwrapper have been installed, we need to update our ~/.profile file to include the following lines at the bottom of the file:
+	```
+	$ echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.profile
+	$ echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.profile
+	$ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.profile
+	$ source ~/.profile
+	```
+	Next, let’s create the Python virtual environment that we’ll use for computer vision development:
+	```
+	$ mkvirtualenv cv -p python3
+	```
+	This command will create a new Python virtual environment named cv using Python 3.4. After that, you can use workon and you’ll be dropped down into your virtual environment:
+	```
+	$ source ~/.profile
+	$ workon cv
+	```
+	Assuming you’ve made it this far, you should now be in the cv virtual environment (which you should stay in for the rest of this tutorial). Our only Python dependency is NumPy, a Python package used for numerical processing:
+	```
+	$ pip install numpy
+	```
+
 - __Step 5__ : Expand filesystem
 - __Step 6__ : Expand filesystem
 - __Step 7__ : Expand filesystem
