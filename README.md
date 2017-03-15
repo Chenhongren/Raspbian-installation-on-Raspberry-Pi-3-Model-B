@@ -42,7 +42,7 @@ And the goal of this manual is to thus guide you step-by-step through the compil
   
   - __Step4__： Select the image file you extracted earlier.
  
-  - __Step5__：Select the drive letter of the SD card in the device box. Be careful to select the correct drive; if you get the wrong one you can destroy the data on your computer's hard disk! If you are using an SD card slot in your computer and can't see the drive in the Win32DiskImager window, try using an external SD adapter.
+  - __Step5__：Select the drive letter of the SD card in the device box. Be careful to select the correct drive; if you get the wrong one you can destroy the data on your computer's hard disk! If you are using an SD card slot in your computer and can't see the drive in the Win32DiskImager window, try using an external SD adapter.
   
   - __Step6__：Click Write and wait for the write to complete.
   
