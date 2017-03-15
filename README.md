@@ -34,8 +34,6 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 - __OpenCV__：3.1.0
 - __Python__：3.4
 
-
-
 # Raspbian Installation Step
 - __Windows(Recommend)__:
 
