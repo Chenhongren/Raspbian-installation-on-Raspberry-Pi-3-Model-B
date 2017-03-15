@@ -23,13 +23,13 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 # VERSION INFO
 - __Raspberry Pi3 Model B__：Raspbian JESSIE WITH PIXEL
 
-  Image with PIXEL desktop based on Debian Jessie
+ *Image with PIXEL desktop based on Debian Jessie*
  
-  Version：January 2017
+  *Version：January 2017*
  
-  Release date：2017-01-11
+  *Release date：2017-01-11*
  
-  Kernel version：4.4
+  *Kernel version：4.4*
  
 - __OpenCV__：3.1.0
 - __Python__：3.4
