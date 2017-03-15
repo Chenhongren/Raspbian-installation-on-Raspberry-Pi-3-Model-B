@@ -23,7 +23,7 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 # VERSION INFO
 - __Raspberry Pi3 Model B__：Raspbian JESSIE WITH PIXEL
 
- *Image with PIXEL desktop based on Debian Jessie*
+  *Image with PIXEL desktop based on Debian Jessie*
  
   *Version：January 2017*
  
