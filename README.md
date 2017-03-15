@@ -13,10 +13,15 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 
 # VWESION INFO
 - Raspberry Pi3 Model B：Raspbian JESSIE WITH PIXEL
+
  Image with PIXEL desktop based on Debian Jessie
+ 
  Version：January 2017
+ 
  Release date：2017-01-11
+ 
  Kernel version：4.4
+ 
 - OpenCV：3.1.0
 - Python：3.4
 
