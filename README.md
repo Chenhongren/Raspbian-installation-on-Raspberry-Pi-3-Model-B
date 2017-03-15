@@ -108,9 +108,21 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 	```
 	$ sudo apt-get install python2.7-dev python3-dev
 	```
+- __Step 3__ : Download the OpenCV source code
 
+	Now that we have our dependencies installed, let’s grab the 3.1.0 archive of OpenCV from the official OpenCV repository. (Note: As future versions of OpenCV are released, you can replace 3.1.0 with the latest version number):
+	```
+	$ cd ~
+	$ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+	$ unzip opencv.zip
+	```
+	We’ll want the full install of OpenCV 3 (to have access to features such as SIFT and SURF, for instance), so we also need to grab the opencv_contrib repository as well:
+	```
+	$ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
+	$ unzip opencv_contrib.zip
+	```
+	*【NOTE】Make sure your OpenCV  and OpenCV_contrib  versions are the same (in this case, 3.1.0 ). If the versions numbers do not match up, then you’ll likely run into either compile-time or runtime.*
 
-- __Step 3__ : Expand filesystem
 - __Step 4__ : Expand filesystem
 - __Step 5__ : Expand filesystem
 - __Step 6__ : Expand filesystem
