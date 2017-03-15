@@ -2,8 +2,17 @@
  *Raspbian Jessie with Pixel*
  
 # REFERENCE
+- __Introduction__:
 
-http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/
+	https://www.raspberrypi.org/products/raspberry-pi-3-model-b/
+	
+- __Installation__：
+
+	https://www.raspberrypi.org/downloads/raspbian/
+	
+	https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+	
+	http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/
 
 # INTRODUCTION
 
@@ -155,7 +164,66 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 	```
 	$ pip install numpy
 	```
+- __Step 5__ : Compile and Install OpenCV
+	We are now ready to compile and install OpenCV! Double-check that you are in the cv virtual environment by examining your prompt (you should see the (cv) text preceding it), and if not, simply execute workon:
+	```
+	$ workon cv
+	```
+	Once you have ensured you are in the cv virtual environment, we can setup our build using CMake:
+	```
+	$ cd ~/opencv-3.1.0/
+	$ mkdir build
+	$ cd build
+	$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	    -D CMAKE_INSTALL_PREFIX=/usr/local \
+	    -D INSTALL_PYTHON_EXAMPLES=ON \
+	    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules \
+	    -D BUILD_EXAMPLES=ON ..
+	```
+	Finally, we are now ready to compile OpenCV:
+	```
+	$ make -j4
+	```
+	From there, all you need to do is install OpenCV 3 on your Raspberry Pi 3:
+	```
+	$ sudo make install
+	$ sudo ldconfig
+	```
+- __Step 6__ : Finish installation OpenCV on Raspberry Pi 3
 
-- __Step 5__ : Expand filesystem
-- __Step 6__ : Expand filesystem
-- __Step 7__ : Expand filesystem
+	We’re almost done — just a few more steps to go and you’ll be ready to use your Raspberry Pi 3 with OpenCV 3.
+	After running make install, your OpenCV + Python bindings should be installed in /usr/local/lib/python3.4/site-packages. Again, you can verify this with the ls command:
+	```
+	$ ls -l /usr/local/lib/python3.4/site-packages/
+	```
+	*【CHECK】
+	total 1852
+	-rw-r--r-- 1 root staff 1895932 Mar 20 21:51 cv2.cpython-34m.so*
+	we need to do is rename the file:
+	```
+	$ cd /usr/local/lib/python3.4/site-packages/
+	$ sudo mv cv2.cpython-34m.so cv2.so
+	```
+	After renaming to cv2.so, we can sym-link our OpenCV bindings into the cv virtual environment for Python 3.4:
+	```
+	$ cd ~/.virtualenvs/cv/lib/python3.4/site-packages/
+	$ ln -s /usr/local/lib/python3.4/site-packages/cv2.so cv2.so
+	```
+- __Step 7__ : Testing
+
+	Congratulations, you now have OpenCV 3 installed on your Raspberry Pi 3 running Raspbian Jessie! 
+	Let’s first verify that your OpenCV installation is working properly. Open up a new terminal, execute the source and workon commands, and then finally attempt to import the Python and OpenCV bindings:
+	```
+	$ source ~/.profile 
+	$ workon cv
+	$ python
+	>>> import cv2
+	>>> cv2.__version__
+	'3.1.0'
+	>>>
+	```
+	Once OpenCV has been installed, you can remove both the opencv-3.1.0 and opencv_contrib-3.1.0 directories to free up a bunch of space on your disk:
+	```
+	$ rm -rf opencv-3.1.0 opencv_contrib-3.1.0
+	```
+
