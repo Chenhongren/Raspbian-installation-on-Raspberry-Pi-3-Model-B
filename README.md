@@ -76,7 +76,40 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 	```
 	$sudo apt-get purge wolfram-engine
 	```
-- __Step 2__ : Expand filesystem
+- __Step 2__ : Install Dependencies
+
+	The first step is to update and upgrade any existing packages:
+	```
+	$ sudo apt-get update
+	$ sudo apt-get upgrade
+	```
+	We then need to install some developer tools, including CMake, which helps us configure the OpenCV build process:
+	```
+	$sudo apt-get install build-essential cmake pkg-config
+	```
+	Next, we need to install some image I/O packages that allow us to load various image file formats from disk. Examples of such file formats include JPEG, PNG, TIFF, etc.:
+	```
+	$ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+	```
+	Just as we need image I/O packages, we also need video I/O packages. These libraries allow us to read various video file formats from disk as well as work directly with video streams:
+	```
+	$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+	$ sudo apt-get install libxvidcore-dev libx264-dev
+	```
+	The OpenCV library comes with a sub-module named highgui which is used to display images to our screen and build basic GUIs. In order to compile the highgui module, we need to install the GTK development library:
+	```
+	$ sudo apt-get install libgtk2.0-dev
+	```
+	Many operations inside of OpenCV (namely matrix operations) can be optimized further by installing a few extra dependencies:
+	```
+	$ sudo apt-get install libatlas-base-dev gfortran
+	```
+	These optimization libraries are especially important for resource constrained devices such as the Raspberry Pi. Lastly, let’s install both the Python 2.7 and Python 3 header files so we can compile OpenCV with Python bindings:
+	```
+	$ sudo apt-get install python2.7-dev python3-dev
+	```
+
+
 - __Step 3__ : Expand filesystem
 - __Step 4__ : Expand filesystem
 - __Step 5__ : Expand filesystem
