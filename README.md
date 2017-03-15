@@ -29,7 +29,6 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 
 # Raspbian Installation Step
 - __Windows(Recommend)__:
-
   - __Step1__： Download the “SD Card formatter” from the URL below 
   
        https://www.sdcard.org/cht/downloads/formatter_4/
