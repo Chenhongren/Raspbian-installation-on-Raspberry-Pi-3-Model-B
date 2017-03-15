@@ -73,6 +73,7 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 	And you’ll see Raspbian filesystem has been expanded to include all 8GB of the micro-SD card.
 
 	OpenCV, along with all its dependencies, will need a few gigabytes during the compile, so you should delete the Wolfram engine to free up some space on your Raspberry Pi 3:
+	
 	`$sudo apt-get purge wolfram-engine`
 
 
