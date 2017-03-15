@@ -11,7 +11,18 @@ The Raspberry Pi 3 is the third-generation Raspberry Pi. It replaced the Raspber
 
 And the goal of this manual is to thus guide you step-by-step through the compile and installation process. There are ten parts in this document. If you follow these steps, you can operate image processing using OpenCV on the Raspberry Pi 3 Model B. Anyway, let’s go ahead and get started installing OpenCV 3 on your brand-new Raspberry Pi 3 running Raspbian Jessie.
 
-# STEP
+# VWESION INFO
+- Raspberry Pi3 Model B：Raspbian JESSIE WITH PIXEL
+ Image with PIXEL desktop based on Debian Jessie
+ Version：January 2017
+ Release date：2017-01-11
+ Kernel version：4.4
+- OpenCV：3.1.0
+- Python：3.4
+
+
+
+# Installation STEP
 - __Step 1__ : Expand filesystem
 - __Step 2__ : Expand filesystem
 - __Step 3__ : Expand filesystem
