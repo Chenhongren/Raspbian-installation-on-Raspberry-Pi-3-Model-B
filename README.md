@@ -29,23 +29,24 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 
 # Raspbian Installation Step
 - __Windows(Recommend)__:
-  - __Step1__： Download the “SD Card formatter” from the URL below 
+
+ - __Step1__： Download the “SD Card formatter” from the URL below 
   
        https://www.sdcard.org/cht/downloads/formatter_4/
        
-  - __Step2__： Download the Win32DiskImager utility from the Sourceforge Project page as a zip file; you can run this from a USB drive.
+ - __Step2__： Download the Win32DiskImager utility from the Sourceforge Project page as a zip file; you can run this from a USB drive.
   
        https://sourceforge.net/projects/win32diskimager/
 
-  - __Step3__：Extract the executable from the zip file and run the Win32DiskImager utility; you may need to run this as administrator. Right-click on the file, and select Run as administrator.
+ - __Step3__：Extract the executable from the zip file and run the Win32DiskImager utility; you may need to run this as administrator. Right-click on the file, and select Run as administrator.
   
-  - __Step4__： Select the image file you extracted earlier.
+ - __Step4__： Select the image file you extracted earlier.
  
-  - __Step5__：Select the drive letter of the SD card in the device box. Be careful to select the correct drive; if you get the wrong one you can destroy the data on your computer's hard disk! If you are using an SD card slot in your computer and can't see the drive in the Win32DiskImager window, try using an external SD adapter.
+ - __Step5__：Select the drive letter of the SD card in the device box. Be careful to select the correct drive; if you get the wrong one you can destroy the data on your computer's hard disk! If you are using an SD card slot in your computer and can't see the drive in the Win32DiskImager window, try using an external SD adapter.
   
-  - __Step6__：Click Write and wait for the write to complete.
+ - __Step6__：Click Write and wait for the write to complete.
   
-  - __Step7__：Exit the imager and eject the SD card.
+ - __Step7__：Exit the imager and eject the SD card.
 
 
 - __Mac(Not Recommend)__:
