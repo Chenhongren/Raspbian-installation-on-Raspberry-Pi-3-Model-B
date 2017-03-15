@@ -73,13 +73,21 @@ And the goal of this manual is to thus guide you step-by-step through the compil
 	And you’ll see Raspbian filesystem has been expanded to include all 8GB of the micro-SD card.
 
 	Filesystem     	 	Size  	Used 	Avail 	Use% 	Mounted on
+	
 	/dev/root       		7.2G  	3.3G  	3.6G  	48%	/
+	
 	devtmpfs        		459M        0  	459M   	 0% 	/dev
+	
 	tmpfs           		463M        0  	463M  	 0% 	/dev/shm
+	
 	tmpfs           		463M  	6.4M  	457M   	 2%	/run
+	
 	tmpfs           		5.0M  	4.0K  	5.0M   	 1%	/run/lock
+	
 	tmpfs           		463M        0  	463M   	 0% 	/sys/fs/cgroup
+	
 	/dev/mmcblk0p1  	60M   	20M   	41M  	34% 	/boot
+	
 	tmpfs            		93M     	   0   	93M   	 0%	/run/user/1000
 
 	OpenCV, along with all its dependencies, will need a few gigabytes during the compile, so you should delete the Wolfram engine to free up some space on your Raspberry Pi 3:
