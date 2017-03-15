@@ -1,2 +1,6 @@
 # Raspbian-installation-on-Raspberry-Pi-3-Model-B
- Raspbian Jessie with Pixel
+ *Raspbian Jessie with Pixel*
+ 
+#REFERENCE
+http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/
+
